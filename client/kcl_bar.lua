@@ -44,9 +44,9 @@ function OpenmenuUnicornBar(Job, BossAccessLabelRank, JobGrade, JobGradeName, Me
                     for k,v in pairs(Config.Bar.Unicorn) do
                         RageUI.Button(v.buttoname, nil, {RightLabel = "→→"}, true , {
                             onSelected = function()
-                           	
-                        end})
-                     end
+                                TriggerServerEvent(Config.trigger..':midnight', v.price, v.item, v.count, Job)
+                            end})
+                        end
                     end)
                 if not RageUI.Visible(menuUnicorn) then
             FreezeEntityPosition(PlayerPedId(), false)
