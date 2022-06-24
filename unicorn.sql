@@ -16,7 +16,6 @@
 -- Base de données : `localhost_legacy_1.7`
 --
 
-
 INSERT INTO `addon_account` (`name`, `label`, `shared`) VALUES
 ('society_unicorn', 'unicorn', 1);
 
