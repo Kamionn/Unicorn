@@ -44,4 +44,10 @@ Locales['fr'] = {
 ['title_bar'] = 'Unicorn',
 ['sub_bar'] = 'Bar',
 ['need_money'] = 'Vous n\'avez assez ~r~d\'argent sur l\'entrprise',
+
+-- [Boss]
+['open_boss'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~boss action', 
+['title_boss'] = 'Unicorn',
+['sub_boss'] = 'Boss',
+['need_money'] = 'Vous n\'avez assez ~r~d\'argent sur l\'entrprise',
 }
