@@ -1,6 +1,6 @@
 
 function OpenMenuUnicorn(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
-    local menuUnicorn = RageUI.CreateMenu(_U('title'), _U('submenu') ,nil,nil, nil, nil,MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
+    local menuUnicorn = RageUI.CreateMenu(_U('title'), '',nil,nil, nil, nil,MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
     local unicornindex = {_U('announcement'), _U('interaction')}
     local unicornalue = 1     
     RageUI.Visible(menuUnicorn, not RageUI.Visible(menuUnicorn))
@@ -12,16 +12,17 @@ function OpenMenuUnicorn(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuC
                     else
                         RageUI.Separator(_U('status_Off'))
                     end
+                    RageUI.Separator('____')
                     RageUI.Checkbox(_U('take_Service'), nil, serviceunicorn, {}, {
                         onChecked = function(index, items)
                             serviceunicorn = true
-                                TriggerServerEvent(Config.trigger..':ServiceOn_unicorn')
+                                TriggerServerEvent(Config.trigger..':ServiceOn_unicorn', Job)
                                     end,
                                         onUnChecked = function(index, items)
                                     serviceunicorn = false
-                                TriggerServerEvent('::{Kamion#1323}::ServiceOff_unicorn')
+                                TriggerServerEvent(Config.trigger..':ServiceOff_unicorn')
                             end})
-
+                
                 if serviceunicorn then
                     RageUI.Separator('____')
                     RageUI.List(_U('tablet'), unicornindex, unicornalue, nil, {}, true, {
@@ -35,21 +36,21 @@ function OpenMenuUnicorn(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuC
                     RageUI.Button(_U('announcement_open'), nil, {RightLabel = "→"}, not codesCooldown1, {
                         onSelected = function()
                             codesCooldown1 = true 
-                                TriggerServerEvent('::{Kamion#1323}::Open:unicorn')
+                                TriggerServerEvent(Config.trigger..':Open:unicorn')
                         Citizen.SetTimeout(8000, function() codesCooldown1 = false end)
                     end})
                     
                     RageUI.Button(_U('announcement_recruitment'), nil, {RightLabel = "→"}, not codesCooldown3, {
                         onSelected = function()
                             codesCooldown3 = true 
-                                TriggerServerEvent('::{Kamion#1323}::Recru:unicorn')
+                                TriggerServerEvent(Config.trigger..':Recru:unicorn')
                         Citizen.SetTimeout(8000, function() codesCooldown3 = false end)
                     end})
 
                     RageUI.Button(_U('announcement_close'), nil, {RightLabel = "→"}, not codesCooldown2, {
                         onSelected = function()
                             codesCooldown2 = true 
-                                TriggerServerEvent('::{Kamion#1323}::Close:unicorn')
+                                TriggerServerEvent(Config.trigger..':Close:unicorn')
                         Citizen.SetTimeout(8000, function() codesCooldown2 = false end)
                     end})        
 

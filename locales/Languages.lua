@@ -21,12 +21,12 @@ Locales['fr'] = {
  ['announcement_close'] = 'Annonce ~p~Fermeture',
  ['announcement_other'] = 'Annonce ~p~Personnalisé Ville',
  -- Notification announcement
- ['announcement_casino'] = 'The Diamond Casino',
+ ['announcement_unicorn'] = 'Unicorn',
  ['announcement'] = 'Annonce',
- ['char_casino'] = 'CHAR_CASINO',
- ['announcement_open_text'] = 'Le Casino est désormais ~p~Ouvert~s~ !',
- ['announcement_recru_text'] = 'Le Casino est désormais en phase de ~y~Recrutement~s~ !',
- ['announcement_close_text'] = 'Le Casino est désormais ~r~Fermer~s~ !',
+ ['char_unicorn'] = 'CHAR_STRIPPER_SAPPHIRE',
+ ['announcement_open_text'] = 'L\'unicorn est désormais ~p~Ouvert~s~ !',
+ ['announcement_recru_text'] = 'L\'unicorn est désormais en phase de ~y~Recrutement~s~ !',
+ ['announcement_close_text'] = 'L\'unicorn est désormais ~r~Fermer~s~ !',
  -- interaction
  ['interaction'] = 'Interraction',
  ['billing'] = 'Faire une ~p~Facture',
