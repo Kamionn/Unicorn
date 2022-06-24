@@ -24,7 +24,7 @@ Config.Unicorn = {
 
 Config.Garage = {
 	Unicorn = {
-		{buttoname = "Sentinel", rightlabel = "→→", spawnname = "sentinel", spawnzone = vector3(143.301590, -1277.050293, 28.579863), headingspawn = 210.100479},
+		{buttoname = "Bus", rightlabel = "→→", spawnname = "pbus2", spawnzone = vector3(143.301590, -1277.050293, 28.579863), headingspawn = 210.100479},
         {buttoname = "Granger ", rightlabel = "→→", spawnname = "granger",  spawnzone = vector3(143.301590, -1277.050293, 28.579863), headingspawn = 210.100479},
         {buttoname = "Baller ", rightlabel = "→→", spawnname = "baller3",  spawnzone = vector3(143.301590, -1277.050293, 28.579863), headingspawn = 210.100479},
 	}

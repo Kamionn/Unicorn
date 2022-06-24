@@ -27,7 +27,7 @@ AddEventHandler('esx:setJob2', function(job2)
 end)
 
 function OpenUnicornGarage(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
-    local menuUnicorn = RageUI.CreateMenu(_U('title_clothes'), _U('submenu_Clothes') ,nil,nil,nil, nil, MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
+    local menuUnicorn = RageUI.CreateMenu(_U('title_garage'), _U('sub_garage'),nil,nil,nil, nil, MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
     RageUI.Visible(menuUnicorn, not RageUI.Visible(menuUnicorn))
     while menuUnicorn do
         Citizen.Wait(0)
@@ -52,7 +52,7 @@ function OpenUnicornGarage(Job, BossAccessLabelRank, JobGrade, JobGradeName, Men
             for k,v in pairs(Config.Garage.Unicorn) do
             RageUI.Button(v.buttoname, nil, {RightLabel = "→→"}, true , {
                 onSelected = function()
-                    if v.stock > 0 then
+                    
                     if not ESX.Game.IsSpawnPointClear(vector3(v.spawnzone.x, v.spawnzone.y, v.spawnzone.z), 10.0) then
                     ESX.ShowNotification("~b~Casino\nPoint de spawn bloquée")
                     else
@@ -66,9 +66,6 @@ function OpenUnicornGarage(Job, BossAccessLabelRank, JobGrade, JobGradeName, Men
                     v.stock = v.stock - 1
                     RageUI.CloseAll()
                   end
-                else 
-                    ESX.ShowNotification("Plus de véhicule")
-                end
                 end})
             end
     end)
