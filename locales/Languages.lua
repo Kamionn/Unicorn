@@ -3,35 +3,37 @@ Locales['fr'] = {
 -- 
 ['keybind_text'] = '',
 
--- ShowHelpNotification
-['open_Clothe_job'] = 'Appuyez sur ~INPUT_PICKUP~  pour acceder au vestiaire.',
--- Menu + button
-['title_clothes'] = 'Tenues Métier',
-['button_Clothes'] = 'Tenues ~p~Civil',
-['submenu_Clothes'] = 'Tenues Civil',
-['button_society_Clothes'] = 'Tenues ~p~Entreprise',
-['button_society_Clothes_add_manual'] = 'Crée une ~p~tenue manuellement',
-['button_society_Clothes_add_auto'] = 'Crée une ~p~tenue automatiquement',
-['button_society_Clothes_delete'] = 'Supprimer une ~p~tenue',
+ -- [F6]
+ ['key_desc'] = 'Ouvrir le menu Casino',
+ ['submenu'] = 'The Diamond Casino',
+ ['status_On'] = 'Status : ~b~En service',
+ ['status_Off'] = 'Status : ~b~Hors service',
+ ['take_Service'] = 'Prendre son service',
+ ['announcement_Take'] = 'Prise de Service',
+ ['announcement_Stop'] = 'Fin de Service',
+ ['notif_on'] = '~w~ à pris son service',
+ ['notif_off'] = '~w~ à arrêté son service',
+ ['tablet'] = 'Tablette :',
+ -- announcement Panel
+ ['announcement_open'] = 'Annonce ~b~Ouverture',
+ ['announcement_recruitment'] = 'Annonce ~b~Recrutement',
+ ['announcement_close'] = 'Annonce ~b~Fermeture',
+ ['announcement_other'] = 'Annonce ~b~Personnalisé Ville',
+ -- Notification announcement
+ ['announcement_casino'] = 'The Diamond Casino',
+ ['announcement'] = 'Annonce',
+ ['char_casino'] = 'CHAR_CASINO',
+ ['announcement_open_text'] = 'Le Casino est désormais ~b~Ouvert~s~ !',
+ ['announcement_recru_text'] = 'Le Casino est désormais en phase de ~y~Recrutement~s~ !',
+ ['announcement_close_text'] = 'Le Casino est désormais ~r~Fermer~s~ !',
+ -- interaction
+ ['interaction'] = 'Interraction',
+ ['billing'] = 'Faire une ~b~Facture',
+ ['billing_keyboard'] = 'Montant de la facture',
+ ['billing_error'] = '~r~Problèmes~s~: Montant invalide',
+ ['billing_sucess'] = '~g~Vous avez bien envoyer la facture',
+ ['billing_noplayer'] = '~r~Problèmes~s~: Aucun joueur à proximitée',
+ ['recruit'] = 'Recruter une ~b~personne',
+ ['recruit_noplayer'] = 'Aucun joueur proche',
 
-
-['sub_outfit_manual'] = 'Crée manuelle une tenue avec des numéros. ~p~[Prochainement]',
-['bags'] = 'Sac = ~p~',
-['bags_variation'] = 'Variation du sac = ~p~',
-['t_shirt'] = 'T-shirt = ~p~',
-['t_shirt_variation'] = 'Variation du t-shirt = ~p~',
-['torso'] = 'Torse = ~p~',
-['torso_variation'] = 'Variation du torse = ~p~',
-['arms'] = 'Bras = ~p~',
-['arms_variation'] = 'Variation du bras = ~p~',
-['pants'] = 'Pantalon = ~p~',
-['pants_variation'] = 'Variation du pantalon = ~p~',
-['save_clothes'] = '~p~Enregistrer la tenue',
-['refresh_clothes'] = 'Refraichir les ~p~tenues',
-['invalid_clothes'] = 'Grade Invalide',
-['no_value'] = 'Non renseigner',
-
--- Outfit Auto
-['copy_outfit'] = 'Copie de la tenue..',
-['sub_outfit_auto'] = 'Crée automatiquement une tenue avec votre tenue actuel.',
 }
