@@ -42,5 +42,6 @@ Locales['fr'] = {
 -- [Bar]
 ['open_bar'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~bar', 
 ['title_bar'] = 'Unicorn',
-['sub_bar'] = 'Bar'
+['sub_bar'] = 'Bar',
+['need_money'] = 'Vous n\'avez assez ~r~d\'argent sur l\'entrprise',
 }

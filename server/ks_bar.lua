@@ -17,6 +17,6 @@ AddEventHandler(Config.trigger..':midnight', function(price, item, count, Job)
         xPlayer.addInventoryItem(item, count)
         societyAccount.removeMoney(price)
     else 
-        TriggerClientEvent(Config.Notification, _source, "Vous n'avez assez ~r~d\'argent sur l'entrprise")
+        TriggerClientEvent(Config.Notification, _source, _U('need_money'))
     end
 end)

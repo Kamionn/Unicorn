@@ -69,8 +69,8 @@ function OpenMenuUnicorn(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuC
                                                             Citizen.Wait(500)
                                                                 for i = 1, #Config.unicorn do
                                                                     local v = Config.unicorn[i]
-                                                            TriggerServerEvent('esx_billing:sendBill', GetPlayerServerId(player), v.JobSociety, ('unicorn'), amount)
-                                                        end
+                                                                  TriggerServerEvent('esx_billing:sendBill', GetPlayerServerId(closestPlayer), 'society_'..Job, Job, amount, true)
+                                                                end
                                                     Citizen.Wait(100)
                                                 ESX.ShowNotification(_U('billing_sucess'))
                                             end
