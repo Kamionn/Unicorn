@@ -1,8 +1,4 @@
 Locales['fr'] = {
-
--- 
-['keybind_text'] = '',
-
  -- [F6]
  ['keybind_text'] = 'Ouvrir le menu unicorn',
  ['title'] = 'Unicorn',
@@ -37,9 +33,11 @@ Locales['fr'] = {
  ['recruit'] = 'Recruter une ~p~personne',
  ['recruit_noplayer'] = 'Aucun joueur proche',
 
- -- Garage 
+ -- [Garage] 
  ['open_garage'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~garage',
  ['delete_car'] = 'Ranger votre véhicule',
  ['title_garage'] = 'Unicorn',
  ['sub_garage'] = 'Garage',
+
+-- [Bar] 
 }
