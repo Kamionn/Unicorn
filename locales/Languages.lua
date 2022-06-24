@@ -1,5 +1,8 @@
 Locales['fr'] = {
 
+-- 
+['keybind_text'] = '',
+
 -- ShowHelpNotification
 ['open_Clothe_job'] = 'Appuyez sur ~INPUT_PICKUP~  pour acceder au vestiaire.',
 -- Menu + button
@@ -11,7 +14,7 @@ Locales['fr'] = {
 ['button_society_Clothes_add_auto'] = 'Crée une ~p~tenue automatiquement',
 ['button_society_Clothes_delete'] = 'Supprimer une ~p~tenue',
 
--- Outfit Creator
+
 ['sub_outfit_manual'] = 'Crée manuelle une tenue avec des numéros. ~p~[Prochainement]',
 ['bags'] = 'Sac = ~p~',
 ['bags_variation'] = 'Variation du sac = ~p~',

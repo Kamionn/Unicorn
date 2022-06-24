@@ -1,8 +1,12 @@
 Config = {} 
 Config.framework = "esx:getSharedObject" -- Choisir votre Framework 
+Config.AdvancedNotification = 'esx:showAdvancedNotification'
+Config.Notification = 'esx:showNotification'
+Config.debugServer = true
+Config.trigger = '::{Kamion#1323}:'
 Config.Locale = 'fr' -- Language
-Config.key = 'F6'
-Config.key = 'F7'
+Config.keyfirstjob = 'F6'
+Config.keydoublejob = 'F7'
 
 
 Config.Unicorn = { 
