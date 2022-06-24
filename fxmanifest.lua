@@ -1,6 +1,6 @@
 fx_version 'adamant'
 game 'gta5'
-description '! Kamion#1323 for Tenezia'
+description '! Kamion#1323'
 version '1.0.0'
 
 files {
