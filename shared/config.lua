@@ -1,6 +1,10 @@
 Config = {} 
 Config.framework = "esx:getSharedObject" -- Choisir votre Framework 
 Config.Locale = 'fr' -- Language
+Config.key = 'F6'
+Config.key = 'F7'
+
+
 Config.Unicorn = { 
 	  Unicorn = {
 		MenuColor = {a = 255, b = 255, c = 80, o = 100}, -- Couleur bannière du menu
