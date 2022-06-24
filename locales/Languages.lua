@@ -37,4 +37,7 @@ Locales['fr'] = {
  ['recruit'] = 'Recruter une ~p~personne',
  ['recruit_noplayer'] = 'Aucun joueur proche',
 
+ -- Garage 
+ ['open_garage'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~garage',
+ ['delete_car'] = 'Ranger votre véhicule',
 }

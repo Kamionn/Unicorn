@@ -4,7 +4,7 @@ Citizen.CreateThread(function()
 	while ESX == nil do
 		TriggerEvent(Config.framework, function(obj) ESX = obj end)     
 		    Citizen.Wait(100)
-                ClothesJob()
+                UnicornJob()
 	          end
             while ESX.GetPlayerData() == nil do
 		Citizen.Wait(10)
@@ -16,21 +16,21 @@ RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)
 	ESX.PlayerData = xPlayer
     Citizen.Wait(10)
-    ClothesJob()
+    UnicornJob()
 end)
 
 RegisterNetEvent('esx:setJob')
 AddEventHandler('esx:setJob', function(job)
 	ESX.PlayerData.job = job
     Citizen.Wait(10)
-    ClothesJob()
+    UnicornJob()
 end)
 
 RegisterNetEvent('esx:setJob2')
 AddEventHandler('esx:setJob2', function(job2)
     ESX.PlayerData.job2 = job2
     Citizen.Wait(10)
-    ClothesJob()
+    UnicornJob()
 end)
 
 
