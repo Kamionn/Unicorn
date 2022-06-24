@@ -39,5 +39,6 @@ Locales['fr'] = {
  ['title_garage'] = 'Unicorn',
  ['sub_garage'] = 'Garage',
 
--- [Bar] 
+-- [Bar]
+['open_bar'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~bar', 
 }

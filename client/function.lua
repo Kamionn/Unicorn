@@ -68,7 +68,7 @@ function UnicornBar()
                                 InZone = true
                                     DrawMarker(v.MarkerType,  v.PosBar.x, v.PosBar.y, v.PosBar.z -0.98, 0.0, 0.0, 0.0, -90.0, 0.0, 0.0, 0.7, 0.7, 0.7, v.MarkerColor.r, v.MarkerColor.g, v.MarkerColor.b, 200, 0, 1, 2, 0, nil, nil, 0)
                                         if dst1 < 4.0 then
-                                            ESX.ShowHelpNotification(_U('open_Clothe_job'))
+                                            ESX.ShowHelpNotification(_U('open_bar'))
                                                 if IsControlJustReleased(1, 38) then
                                             OpenmenuUnicornBar(v.Job, v.BossAccessLabelRank, v.JobGrade, v.JobGradeName, v.MenuColor)
                                         end
