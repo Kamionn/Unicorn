@@ -35,7 +35,7 @@ end)
 
 
 function OpenmenuUnicornBar(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
-    local menuUnicorn = RageUI.CreateMenu(_U('title_clothes'), _U('submenu_Clothes') ,nil,nil,nil, nil, MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
+    local menuUnicorn = RageUI.CreateMenu(_U('title_bar'), _U('sub_bar') ,nil,nil,nil, nil, MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
     RageUI.Visible(menuUnicorn, not RageUI.Visible(menuUnicorn))
         while menuUnicorn do
             Citizen.Wait(0)
