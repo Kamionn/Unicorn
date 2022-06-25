@@ -50,4 +50,5 @@ Locales['fr'] = {
 ['title_boss'] = 'Unicorn',
 ['sub_boss'] = 'Boss',
 ['need_money'] = 'Vous n\'avez assez ~r~d\'argent sur l\'entrprise',
+['societymoney_boss'] = 'Entreprise Argent : ~p~',
 }
