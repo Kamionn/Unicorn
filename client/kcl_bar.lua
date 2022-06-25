@@ -2,13 +2,13 @@ Esx = nil
 
 Citizen.CreateThread(function()
 	while ESX == nil do
-		TriggerEvent(Config.framework, function(obj) ESX = obj end)     
-		    Citizen.Wait(100)
-                UnicornBar()
-	          end
-            while ESX.GetPlayerData() == nil do
-		Citizen.Wait(10)
-	end
+			TriggerEvent(Config.framework, function(obj) ESX = obj end)     
+				Citizen.Wait(100)
+					UnicornBar()
+				  end
+				while ESX.GetPlayerData() == nil do
+			Citizen.Wait(10)
+		end
 	PlayerData = ESX.GetPlayerData()
 end)
 
