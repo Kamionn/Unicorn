@@ -33,7 +33,7 @@ client_scripts {
 }
 
 server_scripts{
-    '@oxmysql/lib/MySQL.lua',
+    '@mysql-async/lib/MySQL.lua',
     '@es_extended/locale.lua',
     'locales/*.lua',
     'server/*.lua',

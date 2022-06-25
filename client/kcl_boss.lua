@@ -1,3 +1,5 @@
+local casinoboss = nil
+
 function OpenMenuUnicornBoss(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
     local menuUnicorn = RageUI.CreateMenu(_U('title_boss'), _U('sub_boss'),nil,nil, nil, nil,MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
     local societyunicorn = nil
@@ -11,11 +13,13 @@ function OpenMenuUnicornBoss(Job, BossAccessLabelRank, JobGrade, JobGradeName, M
                             RageUI.Separator(_U('status_Off'))
                         end
                         RageUI.Separator('____')
-                        RageUI.Separator(_U('societymoney_boss'))
+                        RageUI.Separator(_U('societymoney_boss')..casinoboss)
                         RageUI.Separator('____')
                             RageUI.Button(_U('removeMoney_boss'), nil, {RightLabel = "→"}, not codesCooldown77, {
                                 onSelected = function()
-                                    codesCooldown77 = true 
+                                  codesCooldown77 = true
+                                    local money = KeyboardInput(_U('keyboardRemoveMoney_boss'), '', 10) 
+                                    TriggerServerEvent(Config.trigger..':removeMoney', ('society_')..Job, money)
                                 Citizen.SetTimeout(8000, function() codesCooldown77 = false end)
                             end})
 
@@ -38,3 +42,16 @@ function OpenMenuUnicornBoss(Job, BossAccessLabelRank, JobGrade, JobGradeName, M
                 end
             end
         end
+
+        function Refreshcasinoboss()
+         --   if ESX.PlayerData.job ~= nil and ESX.PlayerData.job.grade_name == 'boss' then
+                ESX.TriggerServerCallback('esx_society:getSocietyMoney', function(money)
+                    Updatecasinoboss(money)
+                end, ESX.PlayerData.job.name)
+          --  end
+        end
+        
+        function Updatecasinoboss(money)
+            casinoboss = ESX.Math.GroupDigits(money)
+        end
+        
