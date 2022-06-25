@@ -51,4 +51,9 @@ Locales['fr'] = {
 ['sub_boss'] = 'Boss',
 ['need_money'] = 'Vous n\'avez assez ~r~d\'argent sur l\'entrprise',
 ['societymoney_boss'] = 'Entreprise Argent : ~p~',
+['removeMoney_boss'] = 'Retirer de l\'argent',
+['keyboardRemoveMoney_boss'] = 'Combien voulez vous retirer :',
+['depositMoney_boss'] = 'Déposer de l\'argent',
+['keyboardDepositMoney_boss'] = 'Combien voulez vous déposer :',
+['refreshMoney_boss'] = 'Rafraichir l\'argent',
 }
