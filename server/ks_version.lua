@@ -3,9 +3,9 @@ local Version =
     "enable": true,
     "Language": "English",
     "script": "Unicorn",
-    "version": "0.0.0",
-    "link": " https://kamdev.tebex.io/",
-    "changelog": ""
+    "version": "1.0.0",
+    "tebex": " https://kamdev.tebex.io/",
+    "github": "https://github.com/Kamionn",
 }]==])
 
 local HTTPrequest = "https://raw.githubusercontent.com/Kamionn/Update_Import/main/english/Unicorn.json"
@@ -27,8 +27,8 @@ Citizen.CreateThread(function()
    /         \.'`  `',.--//     ^4INFORMATION: ^7please update the ^3%s ^7!
  -(           I      I  @@\     ^4VERSION: ^3%s^7 is available !
    \         /'.____.'\___|     ^4CHANGELOG:^0 %s
-    '-.....-' __/ | \   (`)     ^4DOWNLOAD:^7 ^3%s
-             /   /  /
+    '-.....-' __/ | \   (`)     ^4TEBEX:^7 ^3%s
+             /   /  /           ^4GITHUB :^7 ^3%s
                  \  \
 ]]):format(_gv.script,_gv.version,_gv.changelog,_gv.link))
 				    end
@@ -41,8 +41,8 @@ Citizen.CreateThread(function()
    /         \.'`  `',.--//     4INFORMATION: ^7please update the ^3%s ^7!
  -(           I      I  @@\     ^4VERSION: ^3%s^7 is available !
    \         /'.____.'\___|     ^4CHANGELOG:^0 %s
-    '-.....-' __/ | \   (`)     ^4DOWNLOAD:^7 ^3%s
-             /   /  /
+    '-.....-' __/ | \   (`)     ^4TEBEX :^7 ^3%s
+             /   /  /           ^4GITHUB :^7 ^3%s
                  \  \
 ]]):format(_gv.script,_gv.version,_gv.changelog,_gv.link))
                 end
