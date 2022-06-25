@@ -125,7 +125,7 @@ function UnicornBoss()
             local InZone = false
             local playerPos = GetEntityCoords(PlayerPedId())
                 for k,v in pairs(Config.Unicorn) do
-                    if ESX.PlayerData.job2 and ESX.PlayerData.job2.name == v.Job or ESX.PlayerData.job and ESX.PlayerData.job.name == v.Job then
+                    if ESX.PlayerData.job2 and ESX.PlayerData.job2.name == v.Job and ESX.PlayerData.job2.name == 'Boss' or ESX.PlayerData.job and ESX.PlayerData.job.name == v.Job then
                         local dst1 = GetDistanceBetweenCoords(playerPos, v.PosBoss, true)
                             if dst1 < 5.0 then
                                 InZone = true

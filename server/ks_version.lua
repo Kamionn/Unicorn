@@ -30,7 +30,7 @@ Citizen.CreateThread(function()
     '-.....-' __/ | \   (`)     ^4TEBEX:^7 ^3%s
              /   /  /           ^4GITHUB :^7 ^3%s
                  \  \
-]]):format(_gv.script,_gv.version,_gv.changelog,_gv.link))
+]]):format(_gv.script,_gv.version,_gv.changelog,_gv.tebex,_gv.changelog,_gv.github))
 				    end
 			    else
 				    print((
@@ -44,7 +44,7 @@ Citizen.CreateThread(function()
     '-.....-' __/ | \   (`)     ^4TEBEX :^7 ^3%s
              /   /  /           ^4GITHUB :^7 ^3%s
                  \  \
-]]):format(_gv.script,_gv.version,_gv.changelog,_gv.link))
+]]):format(_gv.script,_gv.version,_gv.changelog,_gv.tebex,_gv.changelog,_gv.github))
                 end
 			else
 				print(('[^6%s^0] [^1ERROR^0] Impossible de vérifier la version!'):format(tostring(_v.script)))
