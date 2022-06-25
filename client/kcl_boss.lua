@@ -31,12 +31,6 @@ function OpenMenuUnicornBoss(Job, BossAccessLabelRank, JobGrade, JobGradeName, M
                                 codesCooldown78 = true 
                             Citizen.SetTimeout(8000, function() codesCooldown78 = false end)
                         end})
-
-                
-               
-
-                    
-    
                     end)
                 if not RageUI.Visible(menuUnicorn) then
             FreezeEntityPosition(PlayerPedId(), false)
