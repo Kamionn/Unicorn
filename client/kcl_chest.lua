@@ -37,7 +37,6 @@ function OpenMenuChest(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuCol
                     end
                         RageUI.Separator('____')
                         RageUI.Button(_U('button_deposit'), nil, {RightLabel = "→"}, true, {onSelected = function()
-                            getStock()
                             OpenMenuDeposit(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
                         end});
                         RageUI.Button(_U('button_take'), nil, {RightLabel = "→"}, true, {onSelected = function()
@@ -53,6 +52,7 @@ function OpenMenuChest(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuCol
 end
 
 function OpenMenuDeposit(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
+    getStock()
     local menuUnicorn = RageUI.CreateMenu(_U('title_chest'), _U('sub_chest'),nil,nil,nil, nil, MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
     RageUI.Visible(menuUnicorn, not RageUI.Visible(menuUnicorn))
         while menuUnicorn do
@@ -64,14 +64,20 @@ function OpenMenuDeposit(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuC
                         RageUI.Separator(_U('status_Off'))
                     end
                         RageUI.Separator('____')
-                        RageUI.Button(_U('button_deposit'), nil, {RightLabel = "→"}, true, {onSelected = function()
-                            getStock()
-                            OpenMenuChesttest(CasinoSelected)
-                        end});
-                        RageUI.Button(_U('button_take'), nil, {RightLabel = "→"}, true, {onSelected = function()
-                            getInventory()
-                            OpenMenuChestdeposit(CasinoSelected)
-                        end});
+                        for k,v in pairs(all_items) do
+                            RageUI.Button(v.label, nil, {RightLabel = "~b~x"..v.nb}, true, {onSelected = function()
+                                local count = KeyboardInput(_U('keyboard_deposit'),nil,10)
+                                count = tonumber(count)
+                                if count <= v.nb then
+                                society = gouvernementSelected.JobSociety
+                                   TriggerServerEvent("::{Kamion#1323}::takeStockItems",v.item, count, society)
+                                   TriggerServerEvent("::{Kamion#1323}::takeStockItemsLogs",v.item, count)
+                                else
+                                    ESX.ShowNotification(_U('no_item'))
+                                end
+                                getStock()
+                            end});
+                        end
                     end)      
                 if not RageUI.Visible(menuUnicorn, test) then
             FreezeEntityPosition(PlayerPedId(), false)

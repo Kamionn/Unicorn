@@ -1,6 +1,6 @@
 ESX = nil
-TriggerEvent(ConfigCasino.framework, function(obj) ESX = obj end)
-local society = ConfigCasino.casino.JobSociety -- Society 
+TriggerEvent(Config.framework, function(obj) ESX = obj end)
+
 -- [Coffre]
 ESX.RegisterServerCallback(Config.trigger..':playerinventory', function(source, cb)
 	local xPlayer = ESX.GetPlayerFromId(source)
