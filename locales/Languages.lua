@@ -51,9 +51,12 @@ Locales['fr'] = {
 ['sub_boss'] = 'Boss',
 ['need_money'] = 'Vous n\'avez assez ~r~d\'argent sur l\'entrprise',
 ['societymoney_boss'] = 'Entreprise Argent : ~p~',
-['removeMoney_boss'] = 'Retirer de l\'argent',
+['removeMoney_boss'] = 'Retirer de ~p~l\'argent',
 ['keyboardRemoveMoney_boss'] = 'Combien voulez vous ~p~retirer :',
-['depositMoney_boss'] = 'Déposer de l\'argent',
+['depositMoney_boss'] = 'Déposer de ~p~l\'argent',
 ['keyboardDepositMoney_boss'] = 'Combien voulez vous ~p~déposer :',
 ['refreshMoney_boss'] = 'Rafraichir ~p~l\'argent',
+
+-- [Chest]
+['open_chest'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~coffre', 
 }

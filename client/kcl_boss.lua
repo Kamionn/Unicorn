@@ -1,4 +1,4 @@
-local casinoboss = nil
+local casinoboss = 0
 
 function OpenMenuUnicornBoss(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
     local menuUnicorn = RageUI.CreateMenu(_U('title_boss'), _U('sub_boss'),nil,nil, nil, nil,MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
@@ -13,7 +13,7 @@ function OpenMenuUnicornBoss(Job, BossAccessLabelRank, JobGrade, JobGradeName, M
                             RageUI.Separator(_U('status_Off'))
                         end
                         RageUI.Separator('____')
-                        RageUI.Separator(_U('societymoney_boss')..casinoboss)
+                        RageUI.Separator(_U('societymoney_boss')..casinoboss..(' $'))
                         RageUI.Separator('____')
                             RageUI.Button(_U('removeMoney_boss'), nil, {RightLabel = "→"}, not codesCooldown77, {
                                 onSelected = function()

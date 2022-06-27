@@ -4,7 +4,10 @@ Citizen.CreateThread(function()
 	while ESX == nil do
 		TriggerEvent(Config.framework, function(obj) ESX = obj end)     
 		    Citizen.Wait(100)
-                UnicornBar()
+            UnicornBar()
+            UnicornGarage()
+            UnicornChest()
+            UnicornBoss()
 	          end
             while ESX.GetPlayerData() == nil do
 		Citizen.Wait(10)
@@ -18,6 +21,7 @@ AddEventHandler('esx:playerLoaded', function(xPlayer)
     Citizen.Wait(10)
     UnicornBar()
     UnicornGarage()
+    UnicornChest()
     UnicornBoss()
 end)
 
@@ -27,6 +31,7 @@ AddEventHandler('esx:setJob', function(job)
     Citizen.Wait(10)
     UnicornBar()
     UnicornGarage()
+    UnicornChest()
     UnicornBoss()
 end)
 
@@ -36,6 +41,7 @@ AddEventHandler('esx:setJob2', function(job2)
     Citizen.Wait(10)
     UnicornBar()
     UnicornGarage()
+    UnicornChest()
     UnicornBoss()
 end)
 
@@ -102,6 +108,36 @@ function UnicornGarage()
                                     DrawMarker(v.MarkerType,  v.PosGarage.x, v.PosGarage.y, v.PosGarage.z -0.98, 0.0, 0.0, 0.0, -90.0, 0.0, 0.0, 0.7, 0.7, 0.7, v.MarkerColor.r, v.MarkerColor.g, v.MarkerColor.b, 200, 0, 1, 2, 0, nil, nil, 0)
                                         if dst1 < 2.0 then
                                             ESX.ShowHelpNotification(_U('open_garage'))
+                                                if IsControlJustReleased(1, 38) then
+                                            OpenUnicornGarage(v.Job, v.BossAccessLabelRank, v.JobGrade, v.JobGradeName, v.MenuColor)
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    if not InZone then
+                  Wait(500)
+                else
+              Wait(1)
+            end
+        end
+    end)
+end
+
+function UnicornChest()
+    StartJob = true
+    Citizen.CreateThread(function()
+        while StartJob do
+            local InZone = false
+            local playerPos = GetEntityCoords(PlayerPedId())
+                for k,v in pairs(Config.Unicorn) do
+                    if ESX.PlayerData.job2 and ESX.PlayerData.job2.name == v.Job or ESX.PlayerData.job and ESX.PlayerData.job.name == v.Job then
+                        local dst1 = GetDistanceBetweenCoords(playerPos, v.PosChest, true)
+                            if dst1 < 5.0 then
+                                InZone = true
+                                    DrawMarker(v.MarkerType,  v.PosChest.x, v.PosChest.y, v.PosChest.z -0.98, 0.0, 0.0, 0.0, -90.0, 0.0, 0.0, 0.7, 0.7, 0.7, v.MarkerColor.r, v.MarkerColor.g, v.MarkerColor.b, 200, 0, 1, 2, 0, nil, nil, 0)
+                                        if dst1 < 2.0 then
+                                            ESX.ShowHelpNotification(_U('open_chest'))
                                                 if IsControlJustReleased(1, 38) then
                                             OpenUnicornGarage(v.Job, v.BossAccessLabelRank, v.JobGrade, v.JobGradeName, v.MenuColor)
                                         end

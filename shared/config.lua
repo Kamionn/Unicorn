@@ -15,6 +15,7 @@ Config.Unicorn = {
 		MarkerType  = 6, -- Type du Drawmarker
 		PosGarage = vector3(136.525635, -1278.597412, 29.359638),
 		PosBar = vector3(129.634033, -1284.306152, 29.274239),
+		PosChest = vector3(133.620956, -1289.241943, 29.269539),
 		PosBoss = vector3(95.179314, -1293.468628, 29.268768),
 		Job  = "unicorn", -- Job
 		JobGrade = {boss = true, viceboss = true}, -- true / false pour les jobs
