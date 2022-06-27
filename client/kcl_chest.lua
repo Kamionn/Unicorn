@@ -42,14 +42,13 @@ function getStock()
     end)
 end
 
-function OpenMenuCasinoChest(CasinoSelected)
-    local menuCasinos = RageUI.CreateMenu(nil, _U('submenu') ,nil,nil,"shopui_title_casino", "shopui_title_casino", CasinoSelected.Color.a, CasinoSelected.Color.b, CasinoSelected.Color.c, CasinoSelected.Color.o)
-    local test = RageUI.CreateMenu(CasinoSelected.JobName, _U('submenu'), nil, nil, nil, nil, CasinoSelected.Color.a, CasinoSelected.Color.b, CasinoSelected.Color.c, CasinoSelected.Color.o)
-    RageUI.Visible(menuCasinos, not RageUI.Visible(menuCasinos))
-    while menuCasinos do
+function OpenMenuChest(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
+    local menuUnicorn = RageUI.CreateMenu(_U('title_chest'), _U('sub_chest'),nil,nil,nil, nil, MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
+    RageUI.Visible(menuUnicorn, not RageUI.Visible(menuUnicorn))
+    while menuUnicorn do
         Citizen.Wait(0)
-        RageUI.IsVisible(menuCasinos, function()
-            if servicecasino then
+        RageUI.IsVisible(menuUnicorn, function()
+            if serviceunicorn then
                 RageUI.Separator(_U('status_On'))
             else
                 RageUI.Separator(_U('status_Off'))
@@ -58,16 +57,16 @@ function OpenMenuCasinoChest(CasinoSelected)
            
             RageUI.Button(_U('button_deposit'), nil, {RightLabel = "→"}, true, {onSelected = function()
                 getStock()
-                OpenMenuCasinoChesttest(CasinoSelected)
+                OpenMenuChesttest(CasinoSelected)
             end});
             RageUI.Button(_U('button_take'), nil, {RightLabel = "→"}, true, {onSelected = function()
                 getInventory()
-                OpenMenuCasinoChestdeposit(CasinoSelected)
+                OpenMenuChestdeposit(CasinoSelected)
             end});
         end)      
-        if not RageUI.Visible(menuCasinos, test) then
+        if not RageUI.Visible(menuUnicorn, test) then
             FreezeEntityPosition(PlayerPedId(), false)
-            menuCasinos = RMenu:DeleteType("menuCasinos", true)
+            menuUnicorn = RMenu:DeleteType("menuUnicorn", true)
         end
     end
 end

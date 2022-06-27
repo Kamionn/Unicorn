@@ -18,7 +18,7 @@ function OpenUnicornGarage(Job, BossAccessLabelRank, JobGrade, JobGradeName, Men
             while menuUnicorn do
                 Citizen.Wait(0)
                     RageUI.IsVisible(menuUnicorn, function()
-                        if servicegouv then
+                        if serviceunicorn then
                             RageUI.Separator(_U('status_On'))
                         else
                             RageUI.Separator(_U('status_Off'))

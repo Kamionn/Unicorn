@@ -45,6 +45,11 @@ Locales['fr'] = {
 ['sub_bar'] = 'Bar',
 ['need_money'] = 'Vous n\'avez assez ~r~d\'argent sur l\'entrprise',
 
+-- [Chest]
+['open_chest'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~coffre', 
+['title_chest'] = 'Unicorn',
+['sub_chest'] = 'Coffre',
+
 -- [Boss]
 ['open_boss'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~boss action', 
 ['title_boss'] = 'Unicorn',
@@ -56,7 +61,4 @@ Locales['fr'] = {
 ['depositMoney_boss'] = 'Déposer de ~p~l\'argent',
 ['keyboardDepositMoney_boss'] = 'Combien voulez vous ~p~déposer :',
 ['refreshMoney_boss'] = 'Rafraichir ~p~l\'argent',
-
--- [Chest]
-['open_chest'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~coffre', 
 }

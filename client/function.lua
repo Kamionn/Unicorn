@@ -139,7 +139,7 @@ function UnicornChest()
                                         if dst1 < 2.0 then
                                             ESX.ShowHelpNotification(_U('open_chest'))
                                                 if IsControlJustReleased(1, 38) then
-                                            OpenUnicornGarage(v.Job, v.BossAccessLabelRank, v.JobGrade, v.JobGradeName, v.MenuColor)
+                                            OpenMenuChest(v.Job, v.BossAccessLabelRank, v.JobGrade, v.JobGradeName, v.MenuColor)
                                         end
                                     end
                                 end
