@@ -31,13 +31,13 @@ end)
 
 all_items = {}
 function getInventory()
-    ESX.TriggerServerCallback('::{Kamion#1323}::playerinventory', function(inventory)                          
+    ESX.TriggerServerCallback(Config.trigger..':playerinventory', function(inventory)                          
         all_items = inventory
      end)
 end
 
 function getStock()
-    ESX.TriggerServerCallback('::{Kamion#1323}::getStockItems', function(inventory)                         
+    ESX.TriggerServerCallback(Config.trigger..':getStockItems', function(inventory)                         
         all_items = inventory  
     end)
 end
