@@ -2,13 +2,13 @@ Esx = nil
 
 Citizen.CreateThread(function()
 	while ESX == nil do
-		TriggerEvent(Config.framework, function(obj) ESX = obj end)     
-		    Citizen.Wait(100)
-                UnicornBar()
-	          end
-            while ESX.GetPlayerData() == nil do
-		Citizen.Wait(10)
-	end
+			TriggerEvent(Config.framework, function(obj) ESX = obj end)     
+				Citizen.Wait(100)
+					UnicornBar()
+				  end
+				while ESX.GetPlayerData() == nil do
+			Citizen.Wait(10)
+		end
 	PlayerData = ESX.GetPlayerData()
 end)
 
@@ -35,7 +35,7 @@ end)
 
 
 function OpenmenuUnicornBar(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
-    local menuUnicorn = RageUI.CreateMenu(_U('title_bar'), _U('sub_bar') ,nil,nil,nil, nil, MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
+  local menuUnicorn = RageUI.CreateMenu(_U('title_bar'), _U('sub_bar') ,nil,nil,nil, nil, MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
     RageUI.Visible(menuUnicorn, not RageUI.Visible(menuUnicorn))
         while menuUnicorn do
             Citizen.Wait(0)
