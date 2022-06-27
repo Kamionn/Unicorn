@@ -9,7 +9,7 @@ Config.keyfirstjob = 'F6'
 Config.keydoublejob = 'F7'
 
 Config.Unicorn = { 
-	  Unicorn = {
+	Unicorn = {
 		MenuColor = {a = 255, b = 255, c = 80, o = 100}, -- Couleur bannière du menu
 		MarkerColor = { r = 117, g = 52, b = 151 }, -- Couleur du Drawmarker 
 		MarkerType  = 6, -- Type du Drawmarker
@@ -19,7 +19,7 @@ Config.Unicorn = {
 		Job  = "unicorn", -- Job
 		JobGrade = {boss = true, viceboss = true}, -- true / false pour les jobs
 		JobGradeName = {boss = 'boss', viceboss = 'securite'} 
-	  },
+	},
 }
 
 Config.Garage = {
