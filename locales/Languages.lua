@@ -49,8 +49,8 @@ Locales['fr'] = {
 ['open_chest'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~coffre', 
 ['title_chest'] = 'Unicorn',
 ['sub_chest'] = 'Coffre',
-['button_take'] = 'Prendre un objet',
-['button_deposit'] = 'Déposer un objet',
+['button_take'] = 'Prendre un ~p~objet',
+['button_deposit'] = 'Déposer un ~p~objet',
 ['keyboard_take'] = 'Combien voulez vous en retiré',
 ['keyboard_deposit'] = 'Combien voulez vous en déposer',
 

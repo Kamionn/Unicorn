@@ -85,3 +85,35 @@ function OpenMenuDeposit(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuC
       end
    end
 end
+
+function OpenMenugouvernementChestdeposit(gouvernementSelected)
+    getInventory()
+    InZone = false
+    local deposit = RageUI.CreateMenu(gouvernementSelected.JobName, _U('submenu'), nil, nil, nil, nil, gouvernementSelected.Color.a, gouvernementSelected.Color.b, gouvernementSelected.Color.c, gouvernementSelected.Color.o)
+    RageUI.Visible(deposit, not RageUI.Visible(deposit))
+    while deposit do
+        Citizen.Wait(0)
+        RageUI.IsVisible(deposit, function()
+            if servicegouv then
+                RageUI.Separator(_U('status_On'))
+            else
+                RageUI.Separator(_U('status_Off'))
+            end
+            RageUI.Separator('____')
+            for k,v in pairs(all_items) do
+                RageUI.Button(v.label, nil, {RightLabel = "~b~x"..v.nb}, true, {onSelected = function()
+                    local count = KeyboardInput(_U('keyboard_take'),nil,10)
+                    count = tonumber(count)
+                    society = gouvernementSelected.JobSociety
+                    TriggerServerEvent("::{Kamion#1323}::putStockItems",v.item, count, society)
+                     TriggerServerEvent("::{Kamion#1323}::DepoSockItemsLogs",v.item, count)
+                    getInventory()
+                end});
+            end
+    end)      
+        if not RageUI.Visible(deposit, deposit) then
+            FreezeEntityPosition(PlayerPedId(), false)
+            deposit = RMenu:DeleteType("deposit", true)
+        end
+    end
+end
