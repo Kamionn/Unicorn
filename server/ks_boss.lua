@@ -3,7 +3,7 @@ ESX = nil
 TriggerEvent(Config.framework, function(obj) ESX = obj end)
 TriggerEvent('esx_society:isBoss', 'unicorn', 'unicorn', 'society_unicorn', 'society_unicorn', 'society_unicorn', {type = 'private'})
 
-ESX.RegisterServerCallback(Config.trigger..':getSocietyMoney', function(source, cb, soc)
+ESX.RegisterServerCallback('::{Kamion#1323}::getSocietyMoney', function(source, cb, soc)
     local money = nil
         MySQL.Async.fetchAll('SELECT * FROM addon_account_data WHERE account_name = @society ', {
             ['@society'] = soc,
@@ -14,6 +14,8 @@ ESX.RegisterServerCallback(Config.trigger..':getSocietyMoney', function(source, 
             cb(money)
         end)
     end)
+
+
 
     RegisterServerEvent(Config.trigger..':removeMoney')
     AddEventHandler(Config.trigger..':removeMoney', function(society, amount)
