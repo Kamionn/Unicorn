@@ -15,10 +15,10 @@ ESX.RegisterServerCallback(Config.trigger..':playerinventory', function(source, 
 	cb(all_items)
 end)
 
-ESX.RegisterServerCallback(Config.trigger..':getStockItems', function(source, cb)
+ESX.RegisterServerCallback(Config.trigger..':getStockItems', function(source, cb, Job)
 	local all_items = {}
-	print(society)
-	TriggerEvent('esx_addoninventory:getSharedInventory', 'society_casino', function(inventory)
+	print('society_'..Job)
+	TriggerEvent('esx_addoninventory:getSharedInventory', 'society_'..Job, function(inventory)
 		for k,v in pairs(inventory.items) do
 			if v.count > 0 then
 				table.insert(all_items, {label = v.label,item = v.name, nb = v.count})

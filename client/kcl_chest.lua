@@ -18,8 +18,8 @@ function getInventory()
      end)
 end
 
-function getStock()
-    ESX.TriggerServerCallback(Config.trigger..':getStockItems', function(inventory)                         
+function getStock(Job)
+    ESX.TriggerServerCallback(Config.trigger..':getStockItems', function(inventory, Job)                         
         all_items = inventory  
     end)
 end
@@ -42,7 +42,7 @@ function OpenMenuChest(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuCol
                         end});
                         RageUI.Button(_U('button_take'), nil, {RightLabel = "→"}, true, {onSelected = function()
                             getInventory()
-                            OpenMenuChestdeposit(CasinoSelected)
+                            OpenMenuTake(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
                         end});
                     end)      
                 if not RageUI.Visible(menuUnicorn, test) then
@@ -53,7 +53,7 @@ function OpenMenuChest(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuCol
 end
 
 function OpenMenuDeposit(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
-    getInventory()
+    getInventory(Job)
     local menuUnicorn = RageUI.CreateMenu(_U('title_chest'), _U('sub_chest'),nil,nil,nil, nil, MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
     RageUI.Visible(menuUnicorn, not RageUI.Visible(menuUnicorn))
         while menuUnicorn do
@@ -74,7 +74,7 @@ function OpenMenuDeposit(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuC
                             end});
                         end
                     end)      
-                if not RageUI.Visible(menuUnicorn, test) then
+                if not RageUI.Visible(menuUnicorn) then
             FreezeEntityPosition(PlayerPedId(), false)
         menuUnicorn = RMenu:DeleteType("menuUnicorn", true)
       end
@@ -82,7 +82,7 @@ function OpenMenuDeposit(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuC
 end
 
 function OpenMenuTake(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
-    getInventory()
+    getStock()
     local menuUnicorn = RageUI.CreateMenu(_U('title_chest'), _U('sub_chest'),nil,nil,nil, nil, MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
     RageUI.Visible(menuUnicorn, not RageUI.Visible(menuUnicorn))
         while menuUnicorn do
@@ -98,7 +98,7 @@ function OpenMenuTake(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColo
                             RageUI.Button(v.label, nil, {RightLabel = "~p~x"..v.nb}, true, {onSelected = function()
                                 local count = KeyboardInput(_U('keyboard_take'),nil,10)
                                 count = tonumber(count)
-                                TriggerServerEvent(Config.trigger..':putStockItems',v.item, count, Job)
+                                TriggerServerEvent(Config.trigger..':takeStockItems',v.item, count, Job)
                                 getInventory()
                             end});
                         end
