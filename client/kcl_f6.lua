@@ -79,33 +79,33 @@ function OpenMenuUnicorn(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuC
                                 end
                             end});
 
-                            RageUI.Button(_U('announcement_close'), nil, {RightLabel = "→"}, not codesCooldown2, {
-                                onSelected = function()
-                                    codesCooldown2 = true 
-                                        TriggerServerEvent(Config.trigger..':Close:unicorn')
-                                Citizen.SetTimeout(8000, function() codesCooldown2 = false end)
-                            end})   
+                    RageUI.Button(_U('announcement_close'), nil, {RightLabel = "→"}, not codesCooldown2, {
+                        onSelected = function()
+                            codesCooldown2 = true 
+                                TriggerServerEvent(Config.trigger..':Close:unicorn')
+                            Citizen.SetTimeout(8000, function() codesCooldown2 = false end)
+                        end})   
 
-                            RageUI.Button(_U('recruit'), nil , {RightLabel = "→→"}, closestPlayer ~= -1 and closestDistance <= 5.0,{
-                                onSelected = function()     
-                                    if closestPlayer == -1 or closestDistance > 5.0 then
-                                        ESX.ShowNotification(_U('recruit_noplayer'))
-                                            else
-                                                for i = 1, #Config.unicorn do
-                                                    local v = Config.unicorn[i]            
-                                                    TriggerServerEvent('esx_society:manageJob', GetPlayerServerId(closestPlayer), 'society_'..Job, "recrutement", 0)
-                                                end
-                                            end
-                                        end});
+                    RageUI.Button(_U('recruit'), nil , {RightLabel = "→→"}, closestPlayer ~= -1 and closestDistance <= 5.0,{
+                        onSelected = function()     
+                            if closestPlayer == -1 or closestDistance > 5.0 then
+                                ESX.ShowNotification(_U('recruit_noplayer'))
+                                    else
+                                        for i = 1, #Config.unicorn do
+                                            local v = Config.unicorn[i]            
+                                            TriggerServerEvent('esx_society:manageJob', GetPlayerServerId(closestPlayer), 'society_'..Job, "recrutement", 0)
+                                        end
                                     end
-                                end
-                            end)
-                        if not RageUI.Visible(menuUnicorn) then
-                    FreezeEntityPosition(PlayerPedId(), false)
-                    menuUnicorn = RMenu:DeleteType("menuUnicorn", true)
-                    end
-                end
+                                end});
+                            end
+                        end
+                    end)
+                if not RageUI.Visible(menuUnicorn) then
+            FreezeEntityPosition(PlayerPedId(), false)
+            menuUnicorn = RMenu:DeleteType("menuUnicorn", true)
             end
+        end
+    end
 
 
 
