@@ -19,7 +19,7 @@ function getInventory()
 end
 
 function getStock(Job)
-    ESX.TriggerServerCallback(Config.trigger..':getStockItems', function(inventory, Job)                         
+    ESX.TriggerServerCallback(Config.trigger..':getStockItems', function(inventory)                         
         all_items = inventory  
     end)
 end
@@ -32,7 +32,7 @@ function OpenMenuChest(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuCol
                 RageUI.IsVisible(menuUnicorn, function()
                     if serviceunicorn then
                         RageUI.Separator(_U('status_On'))
-                    else
+                      else
                         RageUI.Separator(_U('status_Off'))
                     end
                         RageUI.Separator('____')
@@ -99,7 +99,7 @@ function OpenMenuTake(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColo
                                 local count = KeyboardInput(_U('keyboard_take'),nil,10)
                                 count = tonumber(count)
                                 TriggerServerEvent(Config.trigger..':takeStockItems',v.item, count, Job)
-                                getInventory()
+                                getStock()
                             end});
                         end
                     end)      

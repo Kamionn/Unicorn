@@ -15,10 +15,9 @@ ESX.RegisterServerCallback(Config.trigger..':playerinventory', function(source, 
 	cb(all_items)
 end)
 
-ESX.RegisterServerCallback(Config.trigger..':getStockItems', function(source, cb, Job)
+ESX.RegisterServerCallback(Config.trigger..':getStockItems', function(source, cb)
 	local all_items = {}
-	print('society_'..Job)
-	TriggerEvent('esx_addoninventory:getSharedInventory', 'society_'..Job, function(inventory)
+	TriggerEvent('esx_addoninventory:getSharedInventory', 'society_unicorn', function(inventory)
 		for k,v in pairs(inventory.items) do
 			if v.count > 0 then
 				table.insert(all_items, {label = v.label,item = v.name, nb = v.count})
@@ -47,7 +46,7 @@ end)
 
 
 RegisterServerEvent(Config.trigger..':takeStockItems')
-AddEventHandler(Config.trigger..':takeStockItems', function(itemName, count, society)
+AddEventHandler(Config.trigger..':takeStockItems', function(itemName, count, Job)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	print(society)
 	TriggerEvent('esx_addoninventory:getSharedInventory', 'society_'..Job, function(inventory)
