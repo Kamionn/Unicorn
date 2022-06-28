@@ -5,7 +5,7 @@ UpdateSocietyJobMoney = function(money)
     end
     
 local RefreshSocietyJobMoney = function(Job)
-    ESX.TriggerServerCallback('::{Kamion#1323}::getSocietyMoney', function(money)
+    ESX.TriggerServerCallback(Config.trigger..':getSocietyMoney', function(money)
         UpdateSocietyJobMoney(money)
     end, "society_"..Job)
 end
