@@ -1,6 +1,6 @@
 
 function OpenMenuUnicorn(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
-    local menuUnicorn = RageUI.CreateMenu(_U('title'), '',nil,nil, nil, nil,MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
+    local menuUnicorn = RageUI.CreateMenu(_U('title'), _U('submenu'),nil,nil, nil, nil,MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
     local unicornindex = {_U('announcement'), _U('interaction')}
     local unicornalue = 1     
     RageUI.Visible(menuUnicorn, not RageUI.Visible(menuUnicorn))
