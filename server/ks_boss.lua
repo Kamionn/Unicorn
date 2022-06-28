@@ -25,9 +25,7 @@ ESX.RegisterServerCallback('::{Kamion#1323}::getSocietyMoney', function(source, 
             xPlayer.addMoney(amount)
             account.removeMoney(amount)
             TriggerClientEvent("esx:showNotification", xPlayer.source, "Type : ~b~Retrait~s~\nSomme : ~b~" .. tonumber(amount) .. "$")
-        else 
-      --      TriggerClientEvent("esx:showNotification", xPlayer.source, "~r~Erreur~s~\nType : ~b~Retrait~s~\n Somme : ~b~" .. tonumber(somme) .. "$")
-        end
+        else         end
       end)
         
     end)
