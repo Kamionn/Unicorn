@@ -38,7 +38,7 @@ AddEventHandler(Config.trigger..':putStockItems', function(itemName, count, Job)
 			inventory.addItem(itemName, count)
 			TriggerClientEvent(Config.Notification, xPlayer.source, _U('notification_deposit')..itemName.._U('notification_deposit2')..count)
 		else
-			TriggerClientEvent(Config.Notification, xPlayer.source, "~r~Vous n'en avez pas assez sur vous")
+			TriggerClientEvent(Config.Notification, xPlayer.source, _U('no_item'))
 		end
 	end)
 end)
@@ -52,6 +52,6 @@ AddEventHandler(Config.trigger..':takeStockItems', function(itemName, count, Job
 	TriggerEvent('esx_addoninventory:getSharedInventory', 'society_'..Job, function(inventory)
 			xPlayer.addInventoryItem(itemName, count)
 			inventory.removeItem(itemName, count)
-			TriggerClientEvent(Config.Notification, xPlayer.source, "~b~Retrait coffre\n~w~ Item  : ~b~"..itemName.."\n ~w~Quantité(s) : ~b~"..count.."")
+			TriggerClientEvent(Config.Notification, xPlayer.source, _U('notification_take')..itemName.._U('notification_take2')..count)
 	end)
 end)

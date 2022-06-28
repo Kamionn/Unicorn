@@ -55,6 +55,9 @@ Locales['fr'] = {
 ['keyboard_deposit'] = 'Combien voulez vous en déposer',
 ['notification_deposit'] = '~p~Dépot coffre\n~w~ Item  : ~p~',
 ['notification_deposit2'] = '\n ~w~Quantité(s) : ~p~',
+['notification_take'] = '~p~Retrait coffre\n~w~ Item  : ~p~',
+['notification_take2'] = '\n ~w~Quantité(s) : ~p~',
+['no_item'] = '~r~Vous n\'en avez pas assez sur vous',
 
 -- [Boss]
 ['open_boss'] = 'Appuyez sur ~INPUT_PICKUP~ pour acceder au ~p~boss action', 
