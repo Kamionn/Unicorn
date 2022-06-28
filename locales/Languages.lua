@@ -2,7 +2,7 @@ Locales['fr'] = {
  -- [F6]
  ['keybind_text'] = 'Ouvrir le menu unicorn',
  ['title'] = 'Unicorn',
- ['submenu'] = 'Unicorn',
+ ['submenu'] = 'Panel',
  ['status_On'] = 'Status : ~p~En service',
  ['status_Off'] = 'Status : ~p~Hors service',
  ['take_Service'] = 'Prendre son service',
