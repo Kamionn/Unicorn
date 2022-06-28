@@ -1,4 +1,3 @@
-local casinoboss = 0
 
 function OpenMenuUnicornBoss(Job, BossAccessLabelRank, JobGrade, JobGradeName, MenuColor)
     local menuUnicorn = RageUI.CreateMenu(_U('title_boss'), _U('sub_boss'),nil,nil, nil, nil,MenuColor.a, MenuColor.b, MenuColor.c, MenuColor.o)
@@ -42,16 +41,3 @@ function OpenMenuUnicornBoss(Job, BossAccessLabelRank, JobGrade, JobGradeName, M
                 end
             end
         end
-
-        function Refreshcasinoboss()
-         --   if ESX.PlayerData.job ~= nil and ESX.PlayerData.job.grade_name == 'boss' then
-                ESX.TriggerServerCallback('esx_society:getSocietyMoney', function(money)
-                    Updatecasinoboss(money)
-                end, ESX.PlayerData.job.name)
-          --  end
-        end
-        
-        function Updatecasinoboss(money)
-            casinoboss = ESX.Math.GroupDigits(money)
-        end
-        
