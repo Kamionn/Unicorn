@@ -29,12 +29,12 @@ ESX.RegisterServerCallback(Config.trigger..':getStockItems', function(source, cb
 end)
 
 RegisterServerEvent(Config.trigger..':putStockItems')
-AddEventHandler(Config.trigger..':putStockItems', function(itemName, count, society)
+AddEventHandler(Config.trigger..':putStockItems', function(itemName, count, Job)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local item_in_inventory = xPlayer.getInventoryItem(itemName).count
 
-	TriggerEvent('esx_addoninventory:getSharedInventory', 'society_casino', function(inventory)
-        print(society)
+	TriggerEvent('esx_addoninventory:getSharedInventory', 'society_'..Job, function(inventory)
+        print('society_'..Job)
 		if item_in_inventory >= count and count > 0 then
 			xPlayer.removeInventoryItem(itemName, count)
 			inventory.addItem(itemName, count)
