@@ -30,7 +30,9 @@ function OpenMenuUnicornBoss(Job, BossAccessLabelRank, JobGrade, JobGradeName, M
                                 onSelected = function()
                                   codesCooldown77 = true
                                     local money = KeyboardInput(_U('keyboardRemoveMoney_boss'), '', 10) 
-                                    TriggerServerEvent(Config.trigger..':removeMoney', ('society_')..Job, money)
+                                    local society = ('society_')..Job
+                                    TriggerServerEvent(Config.trigger..':removeMoney', society, money)
+                                    RefreshSocietyJobMoney(Job)
                                 Citizen.SetTimeout(2000, function() codesCooldown77 = false end)
                             end})
 
@@ -43,6 +45,7 @@ function OpenMenuUnicornBoss(Job, BossAccessLabelRank, JobGrade, JobGradeName, M
 
                             RageUI.Button(_U('refreshMoney_boss'), nil, {RightLabel = "→"}, not codesCooldown80, {
                                 onSelected = function()
+                                    RefreshSocietyJobMoney(Job)
                                     codesCooldown80 = true 
                                 Citizen.SetTimeout(2000, function() codesCooldown80 = false end)
                             end})
