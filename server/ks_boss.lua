@@ -13,18 +13,20 @@ ESX.RegisterServerCallback('::{Kamion#1323}::getSocietyMoney', function(source, 
     end)
 
 
-
-    RegisterServerEvent(Config.trigger..':removeMoney')
-    AddEventHandler(Config.trigger..':removeMoney', function(society, amount)
+    RegisterServerEvent(Config.trigger..':withdrawMoney')
+    AddEventHandler(Config.trigger..':withdrawMoney', function(society, amount)
+    
       local xPlayer = ESX.GetPlayerFromId(source)
       local src = source
-        print(society, amount)
-            TriggerEvent('esx_addonaccount:getSharedAccount', society, function(account)
+    
+      TriggerEvent('esx_addonaccount:getSharedAccount', society, function(account)
         if account.money >= tonumber(amount) then
             xPlayer.addMoney(amount)
             account.removeMoney(amount)
             TriggerClientEvent("esx:showNotification", xPlayer.source, "Type : ~b~Retrait~s~\nSomme : ~b~" .. tonumber(amount) .. "$")
-        else         end
+        else 
+            TriggerClientEvent("esx:showNotification", xPlayer.source, "~r~Erreur~s~\nType : ~b~Retrait~s~\n Somme : ~b~" .. tonumber(somme) .. "$")
+        end
       end)
         
     end)
