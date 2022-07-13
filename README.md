@@ -7,3 +7,5 @@ Job Unicorn For FiveM for Framwork Esx !
 - BossAction
 - F6 with annoucement and billing
 - Garage
+
+Easy to config ! let's go to shared/Config.lua
